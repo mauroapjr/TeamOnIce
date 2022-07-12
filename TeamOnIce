@@ -1,0 +1,64 @@
+const iceTeam = {
+  _teamOnIce: { 
+    central: [],
+    rightWing: [],
+    leftWing: [],
+    defense: [],
+    goalie: [],
+    },
+get central() {
+  return this._teamOnIce.central;
+},
+get rightWing() {
+  return this._teamOnIce.rightWing;
+},
+get leftWing() {
+  return this._teamOnIce.leftWing;
+},
+get defense() {
+  return this._teamOnIce.defense;
+},
+get goalie() {
+  return this._teamOnIce.goalie;
+},
+set central (central) {
+  this._teamOnIce.central = central;
+},
+set rightWing (rightWing) {
+  this._teamOnIce.rightWing = rightWing;
+},
+set leftWing (leftWing) {
+  this._teamOnIce.leftWing = leftWing;
+},
+set defense (defense) {
+  this._teamOnIce.defense = defense;
+},
+set goalie (goalie) {
+  this._teamOnIce.goalie = goalie;
+},
+
+get teamOnIce () {
+  return {
+ central: this.central,
+ rightWing: this.rightWing,
+ leftWing: this.leftWing,
+ defense: this.defense,
+ goalie: this.goalie,
+      }
+    },
+
+  addTeamOfCentrals(fullName, position, number) {
+  const teamPlayers = {
+    fullName: fullName,
+    position: position,
+    number: number
+  }
+  return this._teamOnIce.push(teamPlayers);
+ }
+ 
+eTeam.addTeamOfCentrals('Auston Matthews', 'Central', 34)
+
+}
+
+
+console.log(iceTeam)
